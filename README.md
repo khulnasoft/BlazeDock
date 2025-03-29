@@ -151,7 +151,7 @@ config:
   # tsconfig is the path to the tsconfig.json used to build this package. Detauls to `tsconfig.json`
   # Automatically added to the package sources.
   tsconfig: "tsconfig.json"
-  # packaging method. See https://godoc.org/github.com/devpod/blazedock/pkg/blazedock#YarnPackaging for details.
+  # packaging method. See https://godoc.org/github.com/khulnasoft/blazedock/pkg/blazedock#YarnPackaging for details.
   # Defaults to library
   packaging: library
   # If true disables `yarn test`
@@ -177,8 +177,8 @@ config:
   - other=${someBuildArg}
   # image lists the Docker tags blazedock will use and push to
   image:
-  - devpod/blazedock:latest
-  - devpod/blazedock:${__pkg_version}
+  - khulnasoft/blazedock:latest
+  - khulnasoft/blazedock:${__pkg_version}
 ```
 
 The first image name of each Docker dependency which pushed an image will result in a build argument. This mechanism enables a package to build the base image for another one, by using the build argument as `FROM` value.
