@@ -1,0 +1,13 @@
+{
+	"name": "blazedock",
+	"build": {
+		"context": "..",
+		"dockerfile": "../.devpod.Dockerfile"
+	},
+	"runArgs": [
+		"--privileged",
+		"--security-opt=seccomp=unconfined",
+		"--network=host"
+	],
+	"containerUser": "root"
+}
